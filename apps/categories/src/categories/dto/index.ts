@@ -1,6 +1,6 @@
+import { PartialType } from '@nestjs/mapped-types';
 import { IsString, IsArray } from 'class-validator';
 
-/* eslint-disable @typescript-eslint/no-unsafe-call */
 export class CreateCategoryDto {
   @IsString()
   name: string;
@@ -12,3 +12,5 @@ export class CreateCategoryDto {
   @IsString({ each: true })
   images: string[];
 }
+
+export class UpdateCategoryDto extends PartialType(CreateCategoryDto) {}

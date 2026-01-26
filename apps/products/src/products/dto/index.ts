@@ -1,3 +1,4 @@
+import { PartialType } from '@nestjs/mapped-types';
 import { IsArray, IsNumber, IsString } from 'class-validator';
 
 export class CreateProductDto {
@@ -22,3 +23,5 @@ export class CreateProductDto {
   @IsString({ each: true })
   images: string[];
 }
+
+export class UpdateProductDto extends PartialType(CreateProductDto) {}
