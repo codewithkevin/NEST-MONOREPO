@@ -11,7 +11,8 @@ This document provides a comprehensive overview of the **NestJS Monorepo** proje
 3. [Technology Stack](#technology-stack)
 4. [Monorepos vs. Microservices](#monorepos-vs-microservices)
 5. [Core Features & Logic](#core-features--logic)
-6. [Learning Resources](#learning-resources)
+6. [Validation (class-validator vs. Zod/Joi)](#6-validation-class-validator-vs-zodjoi)
+7. [Learning Resources](#learning-resources)
 
 ---
 
@@ -92,7 +93,27 @@ Recently, the project was updated to support a **Many-to-Many** style relationsh
 
 ---
 
-## 6. Learning Resources
+## 6. Validation (class-validator vs. Zod/Joi)
+
+NestJS is heavily built on classes and decorators. Therefore, **`class-validator`** is the most idiomatic (standard) way to handle validation in this ecosystem.
+
+### Why `class-validator`?
+
+- **Single Source of Truth**: Your DTO class defines both the TypeScript interface and the validation rules.
+- **Auto-Transformation**: Nest can automatically convert data (e.g., string to number) using `class-transformer`.
+- **Ecosystem Support**: Most NestJS plugins (like Swagger) automatically generate documentation from your `class-validator` decorators.
+
+### Comparison
+
+| Feature         | class-validator                | Zod / Joi                                     |
+| :-------------- | :----------------------------- | :-------------------------------------------- |
+| **Approach**    | Decorator-based (on classes)   | Schema-based (objects)                        |
+| **Integration** | Direct (built into Nest pipes) | Requires custom pipes or third-party wrappers |
+| **Standard**    | NestJS Standard                | Generic Node.js / Frontend                    |
+
+---
+
+## 7. Learning Resources
 
 ### NestJS Basics
 

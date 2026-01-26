@@ -1,5 +1,6 @@
 import { IsString, IsArray } from 'class-validator';
 
+/* eslint-disable @typescript-eslint/no-unsafe-call */
 export class CreateCategoryDto {
   @IsString()
   name: string;

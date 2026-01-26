@@ -7,8 +7,8 @@ export class CategoriesController {
   constructor(private readonly categoriesService: CategoriesService) {}
 
   @Post()
-  create(@Body() dto: CreateCategoryDto) {
-    const { name, description, images } = dto;
+  create(@Body() input: CreateCategoryDto) {
+    const { name, description, images } = input;
     return this.categoriesService.create(name, description, images);
   }
 
