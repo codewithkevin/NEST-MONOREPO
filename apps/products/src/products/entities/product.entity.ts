@@ -12,7 +12,16 @@ export class Product {
   price: number;
 
   @Prop()
-  categoryId: string; // Changed to string for ObjectId reference potentially
+  category_ids: string[];
+
+  @Prop()
+  description: string;
+
+  @Prop()
+  images: string[];
+
+  @Prop()
+  tags: string[];
 
   @Prop({ default: Date.now })
   createdAt: Date;
