@@ -9,7 +9,7 @@ export class ProductsController {
   create(
     @Body('name') name: string,
     @Body('price') price: number,
-    @Body('categoryId') categoryId: number,
+    @Body('categoryId') categoryId: string,
   ) {
     return this.productsService.create(name, price, categoryId);
   }
