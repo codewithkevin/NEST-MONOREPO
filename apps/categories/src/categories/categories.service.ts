@@ -9,8 +9,16 @@ export class CategoriesService {
     @InjectModel(Category.name) private categoryModel: Model<Category>,
   ) {}
 
-  async create(name: string): Promise<Category> {
-    const createdCategory = new this.categoryModel({ name });
+  async create(
+    name: string,
+    description: string,
+    images: string[],
+  ): Promise<Category> {
+    const createdCategory = new this.categoryModel({
+      name,
+      description,
+      images,
+    });
     return createdCategory.save();
   }
 

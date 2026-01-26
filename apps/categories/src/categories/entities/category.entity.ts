@@ -8,6 +8,12 @@ export class Category {
   @Prop()
   name: string;
 
+  @Prop()
+  description: string;
+
+  @Prop()
+  images: string[];
+
   @Prop({ default: Date.now })
   createdAt: Date;
 
