@@ -21,79 +21,56 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## Learning Guide 📚
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Welcome to this NestJS Monorepo project! This repository is designed for learning microservices architecture.
 
-## Project setup
+### 🏗 Project Structure
 
-```bash
-$ yarn install
-```
+This project is a **Monorepo** containing multiple applications:
 
-## Compile and run the project
+1.  **test-nest** (`apps/test-nest`): The main application (or Gateway).
+2.  **categories** (`apps/categories`): Microservice handling category operations.
+3.  **products** (`apps/products`): Microservice handling product operations.
 
-```bash
-# development
-$ yarn run start
+### 🚀 Getting Started
 
-# watch mode
-$ yarn run start:dev
-
-# production mode
-$ yarn run start:prod
-```
-
-## Run tests
+#### 1. Installation
 
 ```bash
-# unit tests
-$ yarn run test
-
-# e2e tests
-$ yarn run test:e2e
-
-# test coverage
-$ yarn run test:cov
+yarn install
 ```
 
-## Deployment
+#### 2. Running Applications
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+You can run each application independently:
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+**Main App:**
 
 ```bash
-$ yarn install -g @nestjs/mau
-$ mau deploy
+# Run the main application
+nest start
+# Watch mode
+nest start --watch
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+**Microservices:**
 
-## Resources
+```bash
+# Run the Categories service
+nest start categories --watch
 
-Check out a few resources that may come in handy when working with NestJS:
+# Run the Products service
+nest start products --watch
+```
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+### 🧠 Core Concepts to Learn Here
 
-## Support
+- **Monorepo Configuration**: Check `nest-cli.json` to see how projects are mapped.
+- **Microservices**: Explore `main.ts` in apps to see `MicroserviceOptions`.
+- **Modules**: See how features are isolated (e.g., `ProductsModule`).
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### 🔗 Resources
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
-# NEST-MONREPO
+- [NestJS Monorepo Documentation](https://docs.nestjs.com/cli/monorepo)
+- [NestJS Microservices](https://docs.nestjs.com/microservices/basics)
