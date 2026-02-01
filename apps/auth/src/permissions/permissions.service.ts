@@ -328,10 +328,10 @@ export class PermissionsService implements OnModuleInit {
     return this.permissionModel.find({ module, isActive: true }).exec();
   }
 
-  async hasPermission(
+  hasPermission(
     userPermissions: string[],
     requiredPermission: string,
-  ): Promise<boolean> {
+  ): boolean {
     // Check exact match
     if (userPermissions.includes(requiredPermission)) {
       return true;
