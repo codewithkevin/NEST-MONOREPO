@@ -28,13 +28,13 @@
         "tsConfigPath": "apps/products/tsconfig.app.json"
       }
     },
-    "test-nest": {
+    "auth": {
       "type": "application",
-      "root": "apps/test-nest",
+      "root": "apps/auth",
       "entryFile": "main",
-      "sourceRoot": "apps/test-nest/src",
+      "sourceRoot": "apps/auth/src",
       "compilerOptions": {
-        "tsConfigPath": "apps/test-nest/tsconfig.app.json"
+        "tsConfigPath": "apps/auth/tsconfig.app.json"
       }
     }
   }
